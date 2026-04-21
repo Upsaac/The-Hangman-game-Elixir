@@ -1,7 +1,9 @@
 defmodule Hangman do
-  def score_guess({word, "", nose, attempt}, char) do
+
+  def score_guess({word, word_g, nose, attempt}, char) do
     if String.contains?(word, char) do
-      {word, char, nose, attempt}
+      {word, word_g<>char, nose, attempt}
     end
   end
+
 end
