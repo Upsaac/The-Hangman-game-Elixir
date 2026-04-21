@@ -42,7 +42,7 @@ defmodule HangmanTest do
     assert {"hangman", "ahgn", "bcdef", 0} = {"hangman", "ahgn", "bcdef", 0} |> Hangman.score_guess("y")
   end
 
-  @tag :skip
+
   test "Formats feedback" do
     assert "hang-an" == Hangman.format_feedback({"hangman", "ahgn", "bcdef", 0})
     assert "--i-tst--e" == Hangman.format_feedback({"flintstone", "etis", "bc", 4})

@@ -15,4 +15,15 @@ defmodule Hangman do
     end
 
   end
+
+  def format_feedback({word, word_g, _incorrectt, _attempt}) do
+    Enum.reduce(String.graphemes(word),"", fn char, acc ->
+      cond do
+        String.contains?(word_g,char) ->
+          acc<>char
+        true ->
+          acc<>"-"
+      end
+    end)
+  end
 end
