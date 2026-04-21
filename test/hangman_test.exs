@@ -23,7 +23,6 @@ defmodule HangmanTest do
     end)
   end
 
-  @tag :skip
   test "Works with 'hangman'; correct and incorrect letters" do
     assert {"hangman", "ha", "x", 8} = {"hangman", "", "", 9} |> Hangman.score_guess("h") |> Hangman.score_guess("a") |> Hangman.score_guess("x")
     assert {"hangman", "ng", "w", 8} = {"hangman", "", "", 9} |> Hangman.score_guess("n") |> Hangman.score_guess("w") |> Hangman.score_guess("g")
